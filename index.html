@@ -28,7 +28,13 @@
     </table>
     <!-----------------Resposta do Exercício 1------------>
 
-       
+    <script src="valores.js">
+    </script>
+
+    <script>
+
+    </script>
+
     <!---------------------------------------------------->
     <h2>2 Cores</h2>
     <p>
@@ -40,7 +46,18 @@
 
     <!-----------------Resposta do Exercício 2------------>
 
+    <script>
+      const r = Math.floor(Math.random() * 255)
+      const g = Math.floor(Math.random() * 255)
+      const b = Math.floor(Math.random() * 255)
+
+
+      const liCor = document.getElementById('lista-cores')
+      
+     liCor.innerHTML = "<li style='background-image: linear-gradient(to rigth rgb(" + String(r) +"," + String(g) +"," + String(b) + ")" + "'"+ "</li>" 
+    </script>
     
+
     <!---------------------------------------------------->
 
     <h2>3 Países</h2>
@@ -110,7 +127,15 @@
 
     <!-----------------Resposta do Exercício 3------------>
 
+    <script>
+      const maiorLetraPais = document.querySelectorAll('#t2 td')
+      // console.log(maiorLetraPais)
+      for(let i = 0; i <maiorLetraPais.length; i++){
+       const maior = maiorLetraPais[i].textContent.length
 
+        // console.log(maior)
+      }
+    </script>
     <!---------------------------------------------------->
 
     <h2>4 Autopreenchimento</h2>
@@ -149,8 +174,21 @@
     </form>
 
     <!-----------------Resposta do Exercício 4------------>
+
+<script>
+  const listaNome  = document.querySelectorAll('#lista-nomes > li')
+  const nomeAleatorio = listaNome[Math.floor(Math.random() * listaNome.length)].textContent
+
+  let email = document.querySelector('#form-preenchimento')[0]
+  let senha = document.querySelector('#form-preenchimento')[1]
+  email.value = nomeAleatorio + "@gmail.com"
+
+    const oi = listaNome[0].textContent[0] + listaNome[1].textContent[0] + listaNome[2].textContent[0]  + listaNome[3].textContent[0] + listaNome[4].textContent[0][0] + listaNome[5].textContent[0] +  listaNome[6].textContent[0] +  listaNome[7].textContent[0] +  listaNome[8].textContent[0] +  listaNome[9].textContent[0] +  listaNome[10].textContent[0] + listaNome[11].textContent[0] + listaNome[12].textContent[0] + listaNome[13].textContent[0] +  listaNome[14].textContent[0] +  listaNome[15].textContent[0] +  listaNome[16].textContent[0] +  listaNome[17].textContent[0] 
+
+
+  senha.value = oi
   
-    
+</script>
 
     <!---------------------------------------------------->
   </body>
